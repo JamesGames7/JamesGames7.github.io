@@ -1,0 +1,16 @@
+{
+    "name": "Trip Tracking App",
+    "short-name": "TT",
+    "description": "Tracking Trips you may have...that's it",
+    "start_url": "/",
+    "theme_color": "#eeffee",
+    "background_color": "#eeffee",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "pwa.png",
+            "sizes": "any"
+        }
+    ]
+  }
+  
