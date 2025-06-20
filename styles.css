@@ -9,6 +9,7 @@ body {
   grid-template-rows: auto auto;
   place-content: stretch;
   place-items: stretch;
+  height: 97vh;
 }
 
 #1 {
