@@ -2,3 +2,9 @@ body {
   background-color: black;
   color: white;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
