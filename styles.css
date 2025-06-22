@@ -13,25 +13,25 @@ body {
   height: 97dvh;
 }
 
-#1 {
+#one {
   grid-row-start: 1;
   grid-column-start: 1;
   background-color: red;
 }
 
-#2 {
+#two {
   grid-row-start: 1;
   grid-column-start: 2;
   background-color: yellow;
 }
 
-#3 {
+#three {
   grid-row-start: 2;
   grid-column-start: 1;
   background-color: blue;
 }
 
-#4 {
+#four {
   grid-row-start: 2;
   grid-column-start: 2;
   background-color: green;
