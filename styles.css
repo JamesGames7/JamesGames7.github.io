@@ -1,5 +1,5 @@
 html{
-  height:-webkit-fill-available;
+/*   height:-webkit-fill-available; */
 }
 
 body {
@@ -13,9 +13,10 @@ body {
   grid-template-rows: auto auto;
   place-items: stretch;
   
-
+/* 
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: -webkit-fill-available; */
+  height: 100dvh;
 }
 
 #1 {
