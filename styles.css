@@ -8,6 +8,7 @@ body {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   place-items: stretch;
+  gap: 15px;
   
   height: 97dvh;
 }
@@ -15,19 +16,23 @@ body {
 #1 {
   grid-row-start: 1;
   grid-column-start: 1;
+  background: red;
 }
 
 #2 {
   grid-row-start: 1;
   grid-column-start: 2;
+  background: yellow;
 }
 
 #3 {
   grid-row-start: 2;
   grid-column-start: 1;
+  background: blue;
 }
 
 #4 {
   grid-row-start: 2;
   grid-column-start: 2;
+  background: green;
 }
