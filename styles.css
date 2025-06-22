@@ -16,23 +16,23 @@ body {
 #1 {
   grid-row-start: 1;
   grid-column-start: 1;
-  background: red;
+  background-color: red;
 }
 
 #2 {
   grid-row-start: 1;
   grid-column-start: 2;
-  background: yellow;
+  background-color: yellow;
 }
 
 #3 {
   grid-row-start: 2;
   grid-column-start: 1;
-  background: blue;
+  background-color: blue;
 }
 
 #4 {
   grid-row-start: 2;
   grid-column-start: 2;
-  background: green;
+  background-color: green;
 }
