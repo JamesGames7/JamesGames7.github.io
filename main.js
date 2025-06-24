@@ -1,5 +1,5 @@
-function buttonClick(id) {
-  var x = parseInt(document.getElementById(id).value);
+function buttonClick(item) {
+  var x = item.innerHTML;
   x++;
-  document.getElementById(id).value = x;
+  item.innerHTML = x;
 }
