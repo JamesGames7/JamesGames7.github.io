@@ -1,3 +1,3 @@
 function buttonClick(item) {
-  item.innerHTML = item.innerHTML + 1;
+  item.innerHTML = parseInt(item.innerHTML) + 1;
 }
