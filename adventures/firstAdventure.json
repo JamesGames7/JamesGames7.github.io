@@ -1,0 +1,14 @@
+{
+    "name": "My First Adventure",
+    "img": "img/testGuide.png",
+    "icon": "img/cottage.png",
+    "steps": 6,
+    "story": {
+        "1": {"text": "Hello and welcome to your first adventure! Today we will go through the story of Little Red Riding Hood.", "position": "center"},
+        "2": {"text": "It all began when I was hungry, and stumbled across a cottage with 3 bowls of porridge inside! What would you do here?", "position": "left"},
+        "3": {"text": "Well...I broke in and ate it! But the first bowl was too hot, the second bowl was too cold, and luckily the last bowl was just right.", "position": "right"},
+        "4": {"text": "After such a good meal I had to sit down, and I found 3 chairs! The first was too big, the second was too small, but the third was just right.", "position": "right"},
+        "5": {"text": "Then I got sleepy so I found a bedroom! The first bed was too hard, the second was too soft, and the third was just right. Good night!", "position": "left"},
+        "6": {"text": "All of a sudden I heard a grumble and woke up to find 3 bears standing over my bed! I ran away before they could eat me.", "position": "center"}
+    }
+}

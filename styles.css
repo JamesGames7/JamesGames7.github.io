@@ -30,3 +30,7 @@ nav a {
 h1, p {
     margin: 10px;
 }
+
+#adventureGrid {
+    display: grid;
+}
