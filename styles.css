@@ -33,4 +33,13 @@ h1, p {
 
 #adventureGrid {
     display: grid;
+    place-items: center;
+}
+
+.possibleAdventure {
+    width: 100px;
+    height: 100px;
+    background-size: auto 100%;
+    background-position: 80% 0;
+    clip-path: circle();
 }

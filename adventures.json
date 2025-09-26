@@ -1,6 +1,6 @@
-{
+[{
     "name": "My First Adventure",
-    "img": "img/testGuide.png",
+    "image": "img/testGuide.png",
     "icon": "img/cottage.png",
     "steps": 6,
     "story": {
@@ -11,4 +11,4 @@
         "5": {"text": "Then I got sleepy so I found a bedroom! The first bed was too hard, the second was too soft, and the third was just right. Good night!", "position": "left"},
         "6": {"text": "All of a sudden I heard a grumble and woke up to find 3 bears standing over my bed! I ran away before they could eat me.", "position": "center"}
     }
-}
+}]
