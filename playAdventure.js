@@ -1,9 +1,13 @@
-const fs = require('node:fs');
-
-fs.readFile('adventures/firstAdventure.json', 'utf8', (err, data) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log(data);
-}) 
+fetch ("adventures/firstAdventure.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network not okay');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Problem with fetch operation:', error);
+    })
