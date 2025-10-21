@@ -66,5 +66,6 @@ figure {
     background-color: antiquewhite;
     border: black solid 2px;
     cursor: pointer;
-    position: relative;
+    max-width: 1000px;
+    width: 60%;
 }
