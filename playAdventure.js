@@ -3,6 +3,12 @@ fetch ("adventures.json")
         if (!response.ok) {
             throw new Error('Network not okay');
         }
+        if (localStorage.getItem("visited")) {
+            localStorage.setItem("visited", Number(localStorage.getItem("visited")) + 1);
+        } else {
+            localStorage.setItem("visited", 1);
+        }
+        console.log(localStorage.getItem("visited"));
         return response.json();
     })
     .then(data => {
@@ -31,7 +37,7 @@ function story(adventure) {
     `)
     document.getElementById("guide").style.backgroundImage = `url(${adventure.image})`;
 
-    parentEl.insertAdjacentHTML("beforeend", `
+    document.getElementById("guide").insertAdjacentHTML("beforeend", `
         <div id="text"></div>
     `)
 
