@@ -106,3 +106,10 @@ figure {
 #clear:active {
     background-color: greenyellow;
 }
+
+.complete {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/checkmark.png");
+    background-size: 100% 100%;
+}

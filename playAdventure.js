@@ -3,7 +3,6 @@ fetch ("adventures.json")
         if (!response.ok) {
             throw new Error('Network not okay');
         }
-        localStorage.clear();
         return response.json();
     })
     .then(data => {
@@ -20,9 +19,8 @@ fetch ("adventures.json")
             })
 
             if (localStorage.getItem("firstAdventure") == "done") {
-                console.warn("done");
+                document.getElementById(`${adventure.name}-img`).insertAdjacentHTML("beforeend", `<div class="complete"></div>`)
             }
-            console.warn(localStorage);
         });
     })
     .catch(error => {
@@ -83,6 +81,7 @@ function nextSlide(story, curSlide) {
             content.remove();
 
             document.getElementById("end").addEventListener("click", () => {
+                location.href = 'playAdventure.html';
                 localStorage.setItem("firstAdventure", "done");
                 console.log(localStorage);
             })
