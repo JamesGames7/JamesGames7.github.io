@@ -13,6 +13,16 @@ fetch ("adventures.json")
             document.getElementById(adventure.name).addEventListener("click", () => {
                 story(adventure);
             })
+
+            document.getElementById("clear").addEventListener("click", () => {
+                localStorage.clear();
+                console.warn("cleared");
+            })
+
+            if (localStorage.getItem("firstAdventure") == "done") {
+                console.warn("done");
+            }
+            console.warn(localStorage);
         });
     })
     .catch(error => {
@@ -37,12 +47,6 @@ function story(adventure) {
     `)
 
     content = document.getElementById("text");
-
-    console.warn("width stuff");
-    width = content.offsetWidth;
-    console.log(width);
-    content.style.marginLeft = `calc(50% - ${width / 2}px)`;
-    console.log(content.style.marginLeft)
 
     content.insertAdjacentHTML("beforeend", `
         <p>${adventure.story[0].text}</p>
@@ -70,7 +74,18 @@ function nextSlide(story, curSlide) {
         if (story.length > curSlide + 1) {
             nextSlide(story, curSlide + 1);
         } else {
-            console.warn("DONE!")
+            content.replaceWith(content.cloneNode(true));
+            content = document.getElementById("text");
+            while (content.firstChild) {
+                content.removeChild(content.firstChild);
+            }
+            content.parentNode.insertAdjacentHTML("beforeend", `<div id="end"></div>`);
+            content.remove();
+
+            document.getElementById("end").addEventListener("click", () => {
+                localStorage.setItem("firstAdventure", "done");
+                console.log(localStorage);
+            })
         }
     })
 }
