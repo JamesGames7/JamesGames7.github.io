@@ -7,7 +7,7 @@ fetch ("adventures.json")
     })
     .then(data => {
         data.forEach(adventure => {
-            document.getElementById("adventureGrid").insertAdjacentHTML(`beforeend`, `<figure id="${adventure.name}"><div id="${adventure.name}-img" class="possibleAdventure"></div><figcaption>${adventure.name}</figcaption</figure>`);
+            document.getElementById("adventureGrid").insertAdjacentHTML(`beforeend`, `<figure id="${adventure.name}"><div id="${adventure.name}-img" class="possibleAdventure"></div><figcaption>${adventure.name}</figcaption><figcaption>${localStorage.getItem(adventure.name) ? JSON.parse(localStorage.getItem(adventure.name)).length : 0} / ${adventure.endings} endings found</figcaption></figure>`);
             document.getElementById(adventure.name + "-img").style.backgroundImage = `url(${adventure.icon})`;
             document.getElementById(adventure.name).addEventListener("click", () => {
                 story(adventure);
@@ -15,12 +15,9 @@ fetch ("adventures.json")
 
             document.getElementById("clear").addEventListener("click", () => {
                 localStorage.clear();
-                console.warn("cleared");
             })
 
-            console.log(localStorage)
-            // TODO: make this better; json and parse
-            if (localStorage.getItem(adventure.name) == "done") {
+            if (JSON.parse(localStorage.getItem(adventure.name)).length == adventure.endings) {
                 document.getElementById(`${adventure.name}-img`).insertAdjacentHTML("beforeend", `<div class="complete"></div>`)
             }
         });
@@ -30,8 +27,6 @@ fetch ("adventures.json")
     });
 
 function story(adventure) {
-    console.log(adventure)
-
     parentEl = document.getElementById("mainContent");
     while (parentEl.firstChild) {
         parentEl.removeChild(parentEl.firstChild);
@@ -59,13 +54,11 @@ function story(adventure) {
         `)
 
         document.getElementById(`${transition.transition}-transition`).addEventListener("click", () => {
-            console.warn(transition.transition - 1);
             nextSlide(adventure.story, transition.transition - 1, adventure.name);
         })
     })
     if (adventure.story[0].transitions.length == 0) {
         content.addEventListener("click", () => {
-            console.log(adventure.name)
             nextSlide(adventure.story, 1, adventure.name)
         })
     }
@@ -92,9 +85,8 @@ function nextSlide(story, curSlide, name) {
         `)
 
         document.getElementById(`${transition.transition}-transition`).addEventListener("click", () => {
-            console.warn(transition.transition - 1);
             if (transition.transition == "end") {
-                end(content, name);
+                end(content, name, story[curSlide].endId);
             } else {
                 nextSlide(story, transition.transition - 1, name);
             }
@@ -102,13 +94,12 @@ function nextSlide(story, curSlide, name) {
     })
     if (story[curSlide].transitions.length == 0) {
         content.addEventListener("click", () => {
-            console.warn(curSlide + 1);
             nextSlide(story, curSlide + 1, name);
         })
     }
 }
 
-function end(content, name) {
+function end(content, name, endId) {
     content.replaceWith(content.cloneNode(true));
     content = document.getElementById("text");
     while (content.firstChild) {
@@ -118,7 +109,11 @@ function end(content, name) {
     content.remove();
 
     document.getElementById("end").addEventListener("click", () => {
+        curEndings = localStorage.getItem(name) ? JSON.parse(localStorage.getItem(name)) : [];
+        if (!curEndings.includes(endId)) {
+            curEndings.push(endId);
+        }
+        localStorage.setItem(name, JSON.stringify(curEndings));
         location.href = 'playAdventure.html';
-        localStorage.setItem(name, "done");
     })
 }
