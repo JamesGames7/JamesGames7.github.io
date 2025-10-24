@@ -4,12 +4,22 @@
         "image": "img/testGuide.png",
         "icon": "img/cottage.png",
         "story": [
-            {"text": "Hello and welcome to your first adventure! Today we will go through the story of Little Red Riding Hood.", "position": "center"},
-            {"text": "It all began when I was hungry, and stumbled across a cottage with 3 bowls of porridge inside! What would you do here?", "position": "left"},
-            {"text": "Well...I broke in and ate it! But the first bowl was too hot, the second bowl was too cold, and luckily the last bowl was just right.", "position": "right"},
-            {"text": "After such a good meal I had to sit down, and I found 3 chairs! The first was too big, the second was too small, but the third was just right.", "position": "right"},
-            {"text": "Then I got sleepy so I found a bedroom! The first bed was too hard, the second was too soft, and the third was just right. Good night!", "position": "left"},
-            {"text": "All of a sudden I heard a grumble and woke up to find 3 bears standing over my bed! I ran away before they could eat me.", "position": "center"}
+            {"text": "Hello and welcome to your first adventure! Today we will go through the story of Little Red Riding Hood.", "image": "img/cottage.png", "transitions": []},
+            {"text": "It all began when I was hungry, and stumbled across a cottage with 3 bowls of porridge inside! What would you do here?", "image": "img/cottage.png", "transitions": []},
+            {"text": "Well...I broke in and ate it! But the first bowl was too hot, the second bowl was too cold, and luckily the last bowl was just right.", "image": "img/cottage.png", "transitions": []},
+            {"text": "After such a good meal I had to sit down, and I found 3 chairs! The first was too big, the second was too small, but the third was just right.", "image": "img/cottage.png", "transitions": []},
+            {"text": "Then I got sleepy so I found a bedroom! The first bed was too hard, the second was too soft, and the third was just right. Good night!", "image": "img/cottage.png", "transitions": []},
+            {"text": "All of a sudden I heard a grumble and woke up to find 3 bears standing over my bed! I ran away before they could eat me.", "image": "img/cottage.png", "transitions": []}
+        ]
+    },
+
+    {
+        "name": "Sam's Big Adventure",
+        "image": "img/samsBigAdventure/sam.png",
+        "icon": "img/samsBigAdventure/icon.jpg",
+        "story": [
+            {"text": "Sam loved to walk. He liked hearing the birds sing and feeling the wind on his face.<br>One sunny day, he walked so far that he found a big, green forest. The trees were so tall they tickled the clouds.<br>Suddenly, two little creatures appeared!<br>Chipper the squirrel waved his fluffy tail.<br>“Hi there! Follow me! I’ll teach you how to climb a tree!” he squeaked.<br>Aaron the groundhog popped out of a hole and said,<br>“Don’t climb trees! Come see my home underground. It’s warm and cozy!”<br>", "transitions": [{"text": "Go with Chipper", "transition": 2}, {"text": "Go with Aaron", "transition": 7}, {"text": "Go with Chipper and Aaron", "transition": 11}]},
+            {"text": "Sam followed Chipper and started to climb the big oak tree.<br>“Hold on tight!” Chipper called. “Use your feet, not just your hands!”<br>When Sam reached the top, the forest spread out like a green ocean.<br>He could see his house far away!<br>“Look there!” said Chipper. “A bird’s nest! Do you want to peek inside?”<br>", "transitions": [{"text": "Look inside the nest", "transition": 3}, {"text": "Climb down", "transition": 6}]}
         ]
     }
 ]
