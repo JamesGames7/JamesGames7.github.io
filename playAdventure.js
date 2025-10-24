@@ -92,7 +92,11 @@ function nextSlide(story, curSlide) {
 
         document.getElementById(`${transition.transition}-transition`).addEventListener("click", () => {
             console.warn(transition.transition - 1);
-            nextSlide(story, transition.transition - 1);
+            if (transition.transition == "end") {
+                end(content);
+            } else {
+                nextSlide(story, transition.transition - 1);
+            }
         })
     })
     if (story[curSlide].transitions.length == 0) {
