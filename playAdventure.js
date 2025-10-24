@@ -18,6 +18,7 @@ fetch ("adventures.json")
                 console.warn("cleared");
             })
 
+            console.log(localStorage)
             // TODO: make this better; json and parse
             if (localStorage.getItem(adventure.name) == "done") {
                 document.getElementById(`${adventure.name}-img`).insertAdjacentHTML("beforeend", `<div class="complete"></div>`)
@@ -59,18 +60,18 @@ function story(adventure) {
 
         document.getElementById(`${transition.transition}-transition`).addEventListener("click", () => {
             console.warn(transition.transition - 1);
-            nextSlide(adventure.story, transition.transition - 1);
+            nextSlide(adventure.story, transition.transition - 1, adventure.name);
         })
     })
     if (adventure.story[0].transitions.length == 0) {
         content.addEventListener("click", () => {
-            console.warn(1)
-            nextSlide(adventure.story, 1)
+            console.log(adventure.name)
+            nextSlide(adventure.story, 1, adventure.name)
         })
     }
 }
 
-function nextSlide(story, curSlide) {
+function nextSlide(story, curSlide, name) {
     content = document.getElementById("text");
     content.replaceWith(content.cloneNode(true));
     content = document.getElementById("text");
@@ -93,21 +94,21 @@ function nextSlide(story, curSlide) {
         document.getElementById(`${transition.transition}-transition`).addEventListener("click", () => {
             console.warn(transition.transition - 1);
             if (transition.transition == "end") {
-                end(content);
+                end(content, name);
             } else {
-                nextSlide(story, transition.transition - 1);
+                nextSlide(story, transition.transition - 1, name);
             }
         })
     })
     if (story[curSlide].transitions.length == 0) {
         content.addEventListener("click", () => {
             console.warn(curSlide + 1);
-            nextSlide(story, curSlide + 1);
+            nextSlide(story, curSlide + 1, name);
         })
     }
 }
 
-function end(content) {
+function end(content, name) {
     content.replaceWith(content.cloneNode(true));
     content = document.getElementById("text");
     while (content.firstChild) {
@@ -118,7 +119,6 @@ function end(content) {
 
     document.getElementById("end").addEventListener("click", () => {
         location.href = 'playAdventure.html';
-        localStorage.setItem("My First Adventure", "done");
-        console.log(localStorage);
+        localStorage.setItem(name, "done");
     })
 }
