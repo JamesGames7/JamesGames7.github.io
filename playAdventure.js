@@ -6,7 +6,9 @@ fetch ("adventures.json")
         return response.json();
     })
     .then(data => {
+        console.warn(data)
         data.forEach(adventure => {
+            console.log(adventure);
             document.getElementById("adventureGrid").insertAdjacentHTML(`beforeend`, `<figure id="${adventure.name}"><div id="${adventure.name}-img" class="possibleAdventure"></div><figcaption>${adventure.name}</figcaption><figcaption>${localStorage.getItem(adventure.name) ? JSON.parse(localStorage.getItem(adventure.name)).length : 0} / ${adventure.endings} endings found</figcaption></figure>`);
             document.getElementById(adventure.name + "-img").style.backgroundImage = `url(${adventure.icon})`;
             document.getElementById(adventure.name).addEventListener("click", () => {
@@ -17,7 +19,7 @@ fetch ("adventures.json")
                 localStorage.clear();
             })
 
-            if (JSON.parse(localStorage.getItem(adventure.name)).length == adventure.endings) {
+            if (localStorage.getItem(adventure.name) ? JSON.parse(localStorage.getItem(adventure.name)).length == adventure.endings : false) {
                 document.getElementById(`${adventure.name}-img`).insertAdjacentHTML("beforeend", `<div class="complete"></div>`)
             }
         });
