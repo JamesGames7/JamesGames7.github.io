@@ -53,14 +53,20 @@ figure {
     cursor: pointer;
 }
 
-#guide {
-    width: 200px;
-    height: 200px;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+#wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 80px;
+}
+
+#image {
+    width: 75%;
+    aspect-ratio: 1;
+    background-size: 800% 900%;
+    max-width: 512px;
+    border-radius: 10px;
 }
 
 #text {
@@ -69,7 +75,7 @@ figure {
     cursor: pointer;
     max-width: 1000px;
     width: 60%;
-    position: absolute;
+    position: relative;
     left: 20%;
     margin-top: 10px;
 }

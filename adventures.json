@@ -1,7 +1,7 @@
 [
     {
         "name": "Sam's Big Adventure",
-        "image": "img/samsBigAdventure/sam.png",
+        "image": "img/samsBigAdventure/samImages.jpg",
         "icon": "img/samsBigAdventure/icon.jpg",
         "story": [
             {"text": "Sam loved to walk. He liked hearing the birds sing and feeling the wind on his face.<br>One sunny day, he walked so far that he found a big, green forest. The trees were so tall they tickled the clouds.<br>Suddenly, two little creatures appeared!<br>Chipper the squirrel waved his fluffy tail.<br>“Hi there! Follow me! I’ll teach you how to climb a tree!” he squeaked.<br>Aaron the groundhog popped out of a hole and said,<br>“Don’t climb trees! Come see my home underground. It’s warm and cozy!”<br>", "transitions": [{"text": "Go with Chipper", "transition": 2}, {"text": "Go with Aaron", "transition": 7}, {"text": "Go with Chipper and Aaron", "transition": 11}]},

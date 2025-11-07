@@ -33,15 +33,18 @@ function story(adventure) {
     }
 
     parentEl.insertAdjacentHTML("beforeend", `
-        <div id="guide"></div>
-    `)
-    document.getElementById("guide").style.backgroundImage = `url(${adventure.image})`;
-
-    parentEl.insertAdjacentHTML("beforeend", `
         <div id="text">
             <div id="options"></div>
         </div>
+        <div id="wrapper">
+            <div id="image"></div>
+        </div>
     `)
+
+    document.getElementById("image").style.backgroundImage = `url(${adventure.image})`;
+    document.getElementById("image").style.backgroundPosition = `0 0`;
+    console.log(adventure.image);
+    console.log(document.getElementById("image").backgroundImage);
 
     content = document.getElementById("text");
 
@@ -79,6 +82,8 @@ function nextSlide(story, curSlide, name) {
     content.insertAdjacentHTML("beforeend", `
         <div id="options"></div>
     `)
+    console.log(curSlide + 1);
+    document.getElementById("image").style.backgroundPosition = `-${curSlide % 8}00% -${Math.floor((curSlide + 1) / 8)}00%`;
     story[curSlide].transitions.forEach(transition => {
         document.getElementById("options").insertAdjacentHTML("beforeend", `
             <div class="option" id="${transition.transition}-transition">${transition.text}</div>
@@ -107,6 +112,7 @@ function end(content, name, endId) {
     }
     content.parentNode.insertAdjacentHTML("beforeend", `<div id="end"></div>`);
     content.remove();
+    document.getElementById("image").remove();
 
     document.getElementById("end").addEventListener("click", () => {
         curEndings = localStorage.getItem(name) ? JSON.parse(localStorage.getItem(name)) : [];
