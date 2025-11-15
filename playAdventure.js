@@ -41,6 +41,7 @@ function story(adventure) {
         </div>
     `)
 
+    document.getElementById("image").style.backgroundSize = `800% ${adventure.cols}00%`
     document.getElementById("image").style.backgroundImage = `url(${adventure.image})`;
     document.getElementById("image").style.backgroundPosition = `0 0`;
     console.log(adventure.image);
@@ -83,7 +84,9 @@ function nextSlide(story, curSlide, name) {
         <div id="options"></div>
     `)
     console.log(curSlide + 1);
-    document.getElementById("image").style.backgroundPosition = `-${curSlide % 8}00% -${Math.floor((curSlide + 1) / 8)}00%`;
+    console.log(curSlide % 8);
+    console.log((curSlide + 1) / 8);
+    document.getElementById("image").style.backgroundPosition = `-${curSlide % 8}00% -${Math.floor(curSlide / 8)}00%`;
     story[curSlide].transitions.forEach(transition => {
         document.getElementById("options").insertAdjacentHTML("beforeend", `
             <div class="option" id="${transition.transition}-transition">${transition.text}</div>

@@ -64,7 +64,6 @@ figure {
 #image {
     height: 50vh;
     aspect-ratio: 1;
-    background-size: 800% 900%;
     border-radius: 10px;
 }
 
