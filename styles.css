@@ -139,3 +139,12 @@ figure {
     border-radius: 3px;
     cursor: pointer;
 }
+
+#frontPageText {
+    font-size: clamp(1rem, 1.4rem, 5vw); 
+}
+
+#frontPageImage {
+    max-width: 50%;
+    float: right;
+}
