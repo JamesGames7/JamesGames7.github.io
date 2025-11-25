@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(240, 231, 203);
+    background-color: #eafff8ff;
     color: #361c02;
     margin: 0;
     overflow-y: scroll;
@@ -20,11 +20,22 @@ nav a {
     padding-top: 20px;
     padding-bottom: 20px;
     box-sizing: border-box;
-    background-color: #ce473a;
+    background-color: #118273ff;
     color: antiquewhite;
     text-decoration: none;
+    font-size: 20px;
+}
 
-    border: gold 2px groove;
+nav a:hover {
+    background-color: #166b98;
+}
+
+#blue {
+    color: #155a80ff;
+}
+
+#green {
+    color: #127e6fff;
 }
 
 h1, p {
@@ -101,7 +112,6 @@ figure {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    cursor: pointer;
 }
 
 #clear:hover {

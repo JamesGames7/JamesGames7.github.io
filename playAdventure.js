@@ -13,10 +13,6 @@ fetch ("adventures.json")
                 story(adventure);
             })
 
-            document.getElementById("clear").addEventListener("click", () => {
-                localStorage.clear();
-            })
-
             if (localStorage.getItem(adventure.name) ? JSON.parse(localStorage.getItem(adventure.name)).length == adventure.endings : false) {
                 document.getElementById(`${adventure.name}-img`).insertAdjacentHTML("beforeend", `<div class="complete"></div>`)
             }
