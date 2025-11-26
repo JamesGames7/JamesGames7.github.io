@@ -1,6 +1,6 @@
 {
-    "name": "glp",
-    "short_name": "glp",
+    "name": "StorySprout",
+    "short_name": "StorySprout",
     "start_url": "/",
     "display": "standalone",
     "icons": [
