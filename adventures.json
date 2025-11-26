@@ -74,7 +74,15 @@
             {"text": "Years later, when Sam was grown, he took his own children to the forest.<br>He showed them where the trees touched the sky and where Chipper once lived.<br>The forest greeted him quietly, a familiar hum in the wind.<br>And as he smiled, he could have sworn he heard a tiny squirrel giggle, “Welcome back.”<br>", "transitions": [{"text": "THE END", "transition": "end"}], "endId": 31},
             {"text": "Sam decided to go for a swim.<br>He finds a river and starts swimming. He closes his eyes and floats, but when he opens them again, he’s on the bank with no idea where home is.<br>", "transitions": [{"text": "THE END", "transition": "end"}], "endId": 32}
         ],
-        "endings": 32
+        "endings": 32,
+        "questions": [
+            {"text": "Who was the main character?", "type": "multi", "options": ["Sam", "Chipper", "Aaron"], "correct": "Sam"},
+            {"text": "What did Sam love to do?", "type": "multi", "options": ["Swim in the river", "Climb in the mountains", "Go for walks and explore"], "correct": "Go for walks and explore"},
+            {"text": "Where did Sam go on his walk?", "type": "multi", "options": ["In a big city", "In a blue forest", "In a green forest"], "correct": "In a green forest"},
+            {"text": "What were the names of the two creatures Sam met?", "type": "type", "size": "short", "correct": ["aaron", "chipper"]},
+            {"text": "What did Aaron want to show Sam?", "type": "multi", "options": ["His home", "His bird friends", "A waterfall"], "correct": "His home"},
+            {"text": "Would you rather explore with Chipper or Aaron? Explain.", "type": "type", "size": "long"}
+        ]
     },
     {
         "name": "Kevin's School Day",

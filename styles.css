@@ -10,6 +10,7 @@ nav {
     top: 0;
     left: 0;
     display: flex;
+    z-index: 5;
 }
 
 nav a {
@@ -21,13 +22,13 @@ nav a {
     padding-bottom: 20px;
     box-sizing: border-box;
     background-color: #118273ff;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
 }
 
 nav a:hover {
-    background-color: #166b98;
+    background-color: #2f7a8fff;
 }
 
 #blue {
@@ -79,9 +80,8 @@ figure {
 }
 
 #text {
-    background-color: antiquewhite;
+    background-color: rgba(217, 240, 243, 1);
     border: black solid 2px;
-    cursor: pointer;
     max-width: 1000px;
     width: 60%;
     position: relative;
@@ -91,35 +91,46 @@ figure {
 
 #end {
     background-image: url("img/TheEnd.png");
-    aspect-ratio: 668 / 373;
+    aspect-ratio: 1024 / 630;
     width: 50%;
+    max-width: 1024px;
     background-size: 100% 100%;
-    position: absolute;
+    position: relative;
     left: 25%;
-    top: 20%;
+    top: 20px;
     cursor: pointer;
 }
 
-#clear {
-    width: 100px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    border: 5px gold solid;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+#continue {
+    background-color: aquamarine;
+    padding: 10px 0 10px 0;
+    border: black solid 2px;
+    position: relative;
+    width: 50%;
+    max-width: 1024px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    top: 40px;
+    left: 25%;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-#clear:hover {
-    color: white;
-}
-
-#clear:active {
-    background-color: greenyellow;
+#questions {
+    background-color: aquamarine;
+    padding: 10px 0 10px 0;
+    border: black solid 2px;
+    position: relative;
+    width: 50%;
+    max-width: 1024px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    top: 60px;
+    left: 25%;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .complete {
@@ -157,4 +168,85 @@ figure {
 #frontPageImage {
     max-width: 50%;
     float: right;
+}
+
+#logo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    aspect-ratio: 1;
+    width: 10%;
+    max-width: 128px;
+    background-image: url("img/icons/icon512x512.png");
+    background-size: 100% 100%;
+    z-index: 5;
+}
+
+#mainContent {
+    position: relative;
+}
+
+#singleQuestion {
+    background-color: rgba(217, 240, 243, 1);
+    border: black solid 2px;
+    border-radius: 3px;
+    max-width: 1000px;
+    width: 60%;
+    position: relative;
+    top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#questionWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#questionOptions {
+    display: flex;
+    position: relative;
+    top: 40px;
+    justify-content: space-around;
+    height: 50px;
+    width: 60%;
+    left: 20%;
+}
+
+#imageWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#storyImage {
+    height: 50vh;
+    aspect-ratio: 1;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+#nextQuestionWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 60px;
+    gap: 20px;
+}
+
+#response {
+    background-color: rgba(217, 240, 243, 1);
+    border: black solid 2px;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+}
+
+#nextQuestion {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    width: 60%;
+    display: block;
 }
