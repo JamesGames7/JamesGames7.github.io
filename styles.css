@@ -250,3 +250,10 @@ figure {
     width: 60%;
     display: block;
 }
+
+#submitButton {
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}

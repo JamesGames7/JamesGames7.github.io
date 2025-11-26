@@ -254,6 +254,12 @@
             {"text":"Kevin reads the book quietly. He keeps on reading books and goes further and further into the library. Kevin never finds his way back out.","transitions":[{"text":"THE END","transition":"end"}], "endId": 27},
             {"text":"Kevin crawls through the bookshelf and finds a tiny door.","transitions":[{"text":"Where does it go?", "transition":"79"}]}
         ],
-        "endings": 27
+        "endings": 27,
+        "questions": [
+            {"text": "What does Kevin like the least?", "type": "multi", "options": ["Homework", "School", "Walking"], "correct": "School"},
+            {"text": "What does Kevin like?", "type": "multi", "options": ["His bed", "Wearing pajamas", "Driving"], "correct": "His bed"},
+            {"text": "What does Kevin wake up in?", "type": "multi", "options": ["Pajamas", "A suit", "A clown costume"], "correct": "Pajamas"},
+            {"text": "Would you wear a clown costume to school? Explain.", "type": "type", "size": "long"}
+        ]
     }
 ]

@@ -188,7 +188,7 @@ function nextQuestionFn(questions, index, icon) {
             window.index = index;
             window.icon = icon;
             if (curQuestion.size == "long") {
-                text = `<textarea name="response" value="${localStorage.getItem(curQuestion.text) || ""}"></textArea>`
+                text = `<textarea name="response">${localStorage.getItem(curQuestion.text) || ""}</textArea>`
             } else {
                 text = `<input name="response" value="${localStorage.getItem(curQuestion.text) || ""}">`
             }
