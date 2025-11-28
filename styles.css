@@ -50,8 +50,8 @@ h1, p {
 }
 
 .possibleAdventure {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-size: auto 100%;
     background-position: 80% 0;
     clip-path: circle();
@@ -265,5 +265,10 @@ figure {
 
     figcaption {
         font-size: 1rem;
+    }
+
+    .possibleAdventure {
+        width: 100px;
+        height: 100px;
     }
 }
