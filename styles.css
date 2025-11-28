@@ -258,7 +258,7 @@ figure {
     cursor: pointer;
 }
 
-@media all and (width < 700px) {
+@media all and (max-width: 700px) {
     h1 {
         font-size: 3rem;
     }
