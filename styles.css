@@ -50,8 +50,8 @@ h1, p {
 }
 
 .possibleAdventure {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-size: auto 100%;
     background-position: 80% 0;
     clip-path: circle();
@@ -256,4 +256,14 @@ figure {
     padding: 10px;
     border-radius: 3px;
     cursor: pointer;
+}
+
+@media all and (width < 700px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    figcaption {
+        font-size: 1.6rem;
+    }
 }
